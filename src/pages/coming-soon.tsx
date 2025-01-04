@@ -103,7 +103,7 @@ export default function ComingSoon() {
             {/* Technologies */}
             <div className="space-y-8">
               <h2 className="text-2xl font-bold text-center text-green-400">
-                {'> '} Our Technologies
+                {'> '} Technologies we use
               </h2>
               <TechGrid />
             </div>
