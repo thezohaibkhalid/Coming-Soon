@@ -10,8 +10,12 @@ const technologies = [
       { name: 'HTML', icon: '<!>' },
       { name: 'CSS', icon: '{;}' },
       { name: 'JavaScript', icon: '(js)' },
-      { name: 'React', icon: '</>'},
+      { name: 'React', icon: '</>' },
       { name: 'TypeScript', icon: '<T>' },
+      { name: 'Tkinter', icon: '🖥️' },
+      { name: 'Tailwind CSS', icon: '🌪️' },
+      { name: 'Bootstrap', icon: '⚡' },
+      { name: 'Framer Motion', icon: '🎬' }
     ]
   },
   {
@@ -23,38 +27,38 @@ const technologies = [
       { name: 'Laravel', icon: '🔺' },
       { name: 'Node.js', icon: '{}' },
       { name: 'Express.js', icon: '⚡' },
+      { name: 'Golang', icon: '🐹' }
     ]
   },
   {
     section: "Database",
     techs: [
+      { name: 'PostgreSQL', icon: '🗃️' },
       { name: 'MongoDB', icon: '🍃' },
-      { name: 'SQL', icon: '[ ]' },
-      { name: 'SQLite', icon: '📁' },
+      { name: 'SQL', icon: '[]' },
+      { name: 'SQLite', icon: '📁' }
     ]
   },
   {
     section: "Other",
     techs: [
-      { name: 'Go', icon: '🐹' },
       { name: 'C++', icon: '++' },
-      { name: 'Java', icon: '☕' },
+      { name: 'Python', icon: '>>>' },
+      { name: 'Java', icon: '☕' }
     ]
   }
-]
+];
+
 
 export function TechGrid() {
   const gridRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (gridRef.current) {
-      gsap.from(gridRef.current.children, {
-        y: 20,
-        opacity: 0,
-        duration: 0.5,
-        stagger: 0.05,
-        ease: "power2.out"
-      })
+      gsap.fromTo(gridRef.current.children, 
+        { y: 20, opacity: 0 }, 
+        { y: 0, opacity: 1, duration: 2, stagger: 0.05, ease: "power2.out" }
+      )
     }
   }, [])
 

@@ -8,6 +8,7 @@ import { TerminalWindow } from '../components/terminal-window'
 import { CountdownDigit } from '../components/countdown-digit'
 import { TechGrid } from '../components/tech-grid'
 import { MatrixBackground } from '../components/matrix-background'
+import {ReactTyped}  from 'react-typed'
 
 export default function ComingSoon() {
   const [timeLeft, setTimeLeft] = useState({
@@ -61,10 +62,20 @@ export default function ComingSoon() {
           <div className="space-y-16">
             {/* Header */}
             <div className="text-center space-y-4">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-green-400"
-                  style={{ textShadow: '0 0 20px rgba(74, 222, 128, 0.5)' }}>
-                Bitbuilders.tech
-              </h1>
+            <ReactTyped
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-green-400"
+                style={{ textShadow: '0 0 20px rgba(74, 222, 128, 0.5)' }}
+                strings={['Bitbuilders.tech', 'Coming Soon', 'Email us to get notified']}
+                typeSpeed={80}  // Type speed for each string
+                backSpeed={0}   // Slow down the backspace to reduce blinking
+                backDelay={2000} // Add a delay before backspacing starts
+                startDelay={500} // Add a delay before typing starts
+                loop={false}      // Loop the animation
+                showCursor={true} // Show the cursor for a more polished look
+                cursorChar="|"   // Custom cursor
+                fadeOut={true}   // Enable fade-out to smooth the transition
+                fadeOutDelay={1000} // Increase fade-out delay to ensure smoother transition
+              />
               <p className="text-xl text-green-500/80">
                 {'> '} Crafting Digital Excellence
               </p>
@@ -105,6 +116,7 @@ export default function ComingSoon() {
               <h2 className="text-2xl font-bold text-center text-green-400">
                 {'> '} Technologies we use
               </h2>
+              
               <TechGrid />
             </div>
 
