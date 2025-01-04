@@ -44,7 +44,6 @@ const technologies = [
     techs: [
       { name: 'C++', icon: '++' },
       { name: 'Python', icon: '>>>' },
-      { name: 'Java', icon: '☕' }
     ]
   }
 ];

@@ -67,7 +67,7 @@ export default function ComingSoon() {
                 style={{ textShadow: '0 0 20px rgba(74, 222, 128, 0.5)' }}
                 strings={['Bitbuilders.tech', 'Coming Soon', 'Email us to get notified']}
                 typeSpeed={80}  // Type speed for each string
-                backSpeed={0}   // Slow down the backspace to reduce blinking
+                backSpeed={0.1}   // Slow down the backspace to reduce blinking
                 backDelay={2000} // Add a delay before backspacing starts
                 startDelay={500} // Add a delay before typing starts
                 loop={false}      // Loop the animation
