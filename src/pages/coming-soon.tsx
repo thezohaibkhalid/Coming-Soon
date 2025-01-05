@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { Github, Linkedin, Mail, Terminal } from 'lucide-react'
-// import { Input } from "../components/ui/input"
-// import { Button } from "../components/ui/button"
+import { SubscriptionForm } from '../components/SubscribeUs'
 import { TerminalWindow } from '../components/terminal-window'
 import { CountdownDigit } from '../components/countdown-digit'
 import { TechGrid } from '../components/tech-grid'
@@ -90,26 +89,7 @@ export default function ComingSoon() {
             </div>
 
             {/* Email Subscription */}
-            {/* <form 
-              action="/api/collect-email"
-              className="max-w-md mx-auto space-y-4"
-            >
-              <div className="flex flex-col sm:flex-row gap-2">
-                <Input
-                  type="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  className="bg-black/60 border-green-500/30 text-green-500 placeholder:text-green-500/50"
-                  required
-                />
-                <Button 
-                  type="submit"
-                  className="bg-green-500/20 text-green-500 border border-green-500/30 hover:bg-green-500/30"
-                >
-                  Notify Me
-                </Button>
-              </div>
-            </form> */}
+            <SubscriptionForm />
 
             {/* Technologies */}
             <div className="space-y-8">

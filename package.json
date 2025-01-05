@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://thezohaibkhalid.github.io/Coming-Soon",
+  "homepage": "http://thezohaibkhalid.github.io/Coming-Soon",
   "main": "index.js",
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",
