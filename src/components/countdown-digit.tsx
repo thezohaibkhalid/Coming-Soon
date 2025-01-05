@@ -59,7 +59,6 @@ export default function PersistentCountdown() {
     }
     return (
       <div className="flex flex-col items-center gap-8">
-        <h2 className="text-green-500 text-2xl">{`> Crafting Digital Excellence`}</h2>
         <div className="flex space-x-4">
           <CountdownDigit value={days} label="Days" />
           <CountdownDigit value={hours} label="Hours" />

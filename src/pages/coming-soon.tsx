@@ -21,7 +21,7 @@ export default function ComingSoon() {
               <span className="text-green-400">root@bitbuilders:~$</span>
               <span className="animate-pulse">▊</span>
             </div>
-            <p className="typing-animation">initializing bitbuilders.tech...</p>
+            <p className="typing-animation">initializing your brand...</p>
           </div>
 
           <div className="space-y-16">
@@ -45,9 +45,7 @@ export default function ComingSoon() {
                 fadeOut={true}
                 fadeOutDelay={1000}
               />
-              <p className="text-xl text-green-500/80">
-                {"> "} Crafting Digital Excellence
-              </p>
+              <h2 className="text-green-500 text-2xl">{`> Crafting Digital Excellence`}</h2>
             </div>
 
             {/* Countdown */}
