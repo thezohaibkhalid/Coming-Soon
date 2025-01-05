@@ -30,16 +30,16 @@ export default function ComingSoon() {
               <ReactTyped
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-green-400"
                 style={{ textShadow: "0 0 20px rgba(74, 222, 128, 0.5)" }}
-                strings={["Bitbuilders.tech", "Coming Soon"]} //, 'Email us to get notified'
-                typeSpeed={80} // Type speed for each string
-                backSpeed={0.1} // Slow down the backspace to reduce blinking
-                backDelay={2000} // Add a delay before backspacing starts
-                startDelay={500} // Add a delay before typing starts
-                loop={false} // Loop the animation
-                showCursor={true} // Show the cursor for a more polished look
-                cursorChar="|" // Custom cursor
-                fadeOut={true} // Enable fade-out to smooth the transition
-                fadeOutDelay={1000} // Increase fade-out delay to ensure smoother transition
+                strings={["Bitbuilders.tech", "Coming Soon", 'Email us to get notified']} //, 'Email us to get notified'
+                typeSpeed={80}  
+                backSpeed={0.1}  
+                backDelay={2000}  
+                startDelay={500} 
+                loop={false} 
+                showCursor={true} 
+                cursorChar="|"  
+                fadeOut={true} 
+                fadeOutDelay={1000}  
               />
               <p className="text-xl text-green-500/80">
                 {"> "} Crafting Digital Excellence
