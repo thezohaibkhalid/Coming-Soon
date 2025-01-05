@@ -17,14 +17,27 @@
     <meta property="og:title" content="Bit Builders - Coming Soon" />
     <meta
       property="og:description"
-      content="We are Bit Builders, a tech company coming soon with innovative solutions. Stay tuned for updates!"
+      content="We are Bit Builders, a website development agency coming soon with innovative solutions. Stay tuned for updates!"
     />
-    <meta property="og:image" content="path_to_image.jpg" />
+    <meta property="og:image" content="./public/favicon.ico" />
     <meta property="og:url" content="https://bitbuilders.tech" />
-
+    <link rel="canonical" href="https://bitbuilders.tech" />
+    <meta name="robots" content="index, follow" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Bit Builders",
+        "url": "https://bitbuilders.tech",
+        "description": "We are Bit Builders, a tech company coming soon with innovative solutions. Stay tuned for updates!"
+      }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+
+    <main>
+      <div id="root"></div>
+    </main>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

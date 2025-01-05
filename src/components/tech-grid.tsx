@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import gsap from 'gsap';
 
 const technologies = [
@@ -44,8 +44,16 @@ const technologies = [
     techs: [
       { name: 'C++', icon: '++' },
       { name: 'Python', icon: '>>>' },
+      { name: 'Vercel', icon: '🚀' },
+      { name: 'Render', icon: '🌐' },
+      { name: 'Netlify', icon: '⚙️' },
+      { name: 'EJS', icon: '<%= %>' },
+      { name: 'Git', icon: '🔧' },
+      { name: 'Postman', icon: '📬' },
+      { name: 'Socket.IO', icon: '🔗' }
     ],
-  },
+  }
+  
 ];
 
 export function TechGrid() {
