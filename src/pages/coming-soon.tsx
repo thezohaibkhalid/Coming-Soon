@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import { Github, Linkedin, Mail, Terminal } from 'lucide-react'
-import { Input } from "../components/ui/input"
-import { Button } from "../components/ui/button"
+// import { Input } from "../components/ui/input"
+// import { Button } from "../components/ui/button"
 import { TerminalWindow } from '../components/terminal-window'
 import { CountdownDigit } from '../components/countdown-digit'
 import { TechGrid } from '../components/tech-grid'

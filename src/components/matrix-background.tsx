@@ -10,7 +10,7 @@ export function MatrixBackground() {
     if (!canvas) return
 
     const ctx = canvas.getContext('2d')
-    if (!ctx) return
+    if (!canvas || !ctx) return
 
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
@@ -25,6 +25,8 @@ export function MatrixBackground() {
     }
 
     function draw() {
+      if (!canvas || !ctx) return
+
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
