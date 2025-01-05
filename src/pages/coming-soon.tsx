@@ -1,52 +1,18 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import { Github, Linkedin, Mail, Terminal } from 'lucide-react'
-import { SubscriptionForm } from '../components/SubscribeUs'
-import { TerminalWindow } from '../components/terminal-window'
-import  CountdownDigit  from '../components/countdown-digit'
-import { TechGrid } from '../components/tech-grid'
-import { MatrixBackground } from '../components/matrix-background'
-import {ReactTyped}  from 'react-typed'
+import { Github, Linkedin, Mail, Terminal } from "lucide-react";
+import { SubscriptionForm } from "../components/SubscribeUs";
+import { TerminalWindow } from "../components/terminal-window";
+import CountdownDigit from "../components/countdown-digit";
+import { TechGrid } from "../components/tech-grid";
+import { MatrixBackground } from "../components/matrix-background";
+import { ReactTyped } from "react-typed";
 
 export default function ComingSoon() {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 5,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  })
-  
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(prevTime => {
-        const newTime = { ...prevTime }
-        if (newTime.seconds > 0) {
-          newTime.seconds--
-        } else if (newTime.minutes > 0) {
-          newTime.minutes--
-          newTime.seconds = 59
-        } else if (newTime.hours > 0) {
-          newTime.hours--
-          newTime.minutes = 59
-          newTime.seconds = 59
-        } else if (newTime.days > 0) {
-          newTime.days--
-          newTime.hours = 23
-          newTime.minutes = 59
-          newTime.seconds = 59
-        }
-        return newTime
-      })
-    }, 1000)
-
-    return () => clearInterval(timer)
-  }, [])
-
   return (
     <div className="min-h-screen bg-black text-green-500 font-mono overflow-hidden">
       <MatrixBackground />
-      
+
       <div className="container mx-auto px-4 py-8 relative">
         <TerminalWindow>
           <div className="space-y-2 mb-8">
@@ -61,27 +27,27 @@ export default function ComingSoon() {
           <div className="space-y-16">
             {/* Header */}
             <div className="text-center space-y-4">
-            <ReactTyped
+              <ReactTyped
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-green-400"
-                style={{ textShadow: '0 0 20px rgba(74, 222, 128, 0.5)' }}
-                strings={['Bitbuilders.tech', 'Coming Soon']}//, 'Email us to get notified'
-                typeSpeed={80}  // Type speed for each string
-                backSpeed={0.1}   // Slow down the backspace to reduce blinking
+                style={{ textShadow: "0 0 20px rgba(74, 222, 128, 0.5)" }}
+                strings={["Bitbuilders.tech", "Coming Soon"]} //, 'Email us to get notified'
+                typeSpeed={80} // Type speed for each string
+                backSpeed={0.1} // Slow down the backspace to reduce blinking
                 backDelay={2000} // Add a delay before backspacing starts
                 startDelay={500} // Add a delay before typing starts
-                loop={false}      // Loop the animation
+                loop={false} // Loop the animation
                 showCursor={true} // Show the cursor for a more polished look
-                cursorChar="|"   // Custom cursor
-                fadeOut={true}   // Enable fade-out to smooth the transition
+                cursorChar="|" // Custom cursor
+                fadeOut={true} // Enable fade-out to smooth the transition
                 fadeOutDelay={1000} // Increase fade-out delay to ensure smoother transition
               />
               <p className="text-xl text-green-500/80">
-                {'> '} Crafting Digital Excellence
+                {"> "} Crafting Digital Excellence
               </p>
             </div>
 
             {/* Countdown */}
-            <CountdownDigit/>
+            <CountdownDigit />
 
             {/* Email Subscription */}
             <SubscriptionForm />
@@ -89,9 +55,9 @@ export default function ComingSoon() {
             {/* Technologies */}
             <div className="space-y-8">
               <h2 className="text-2xl font-bold text-center text-green-400">
-                {'> '} Technologies we use
+                {"> "} Technologies we use
               </h2>
-              
+
               <TechGrid />
             </div>
 
@@ -115,20 +81,21 @@ export default function ComingSoon() {
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a
-                  href="mailto:contact@bitbuilders.tech"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=zohaibkhalid.pk@gmail.com&su=Project%20Inquiry&body=%0A%0A%20%20%20%20%3C%3C%20Project%20Name%3A%20Enter%20Here%0A%20%20%20%20%3C%3C%20WhatsApp%20Number%3A%20Enter%20Here%0A%20%20%20%20%3C%3C%20Project%20Details%3A%20Enter%20Here%20or%20attach%20files%0A%20%20%20%20%3C%3C%20Advanced%20Details%3A%20Enter%20Here%20%0A%0A%20%20%20%20-----------------------------------------%0A%20%20%20%20Looking%20forward%20to%20your%20response!%0A%0A"
+                  target="_blank"
                   className="text-green-500/80 hover:text-green-400 transition-colors"
                 >
                   <Mail className="w-6 h-6" />
                 </a>
               </div>
               <p className="text-green-500/60">
-                {'> '} &copy; {new Date().getFullYear()} Bitbuilders. All rights reserved.
+                {"> "} &copy; {new Date().getFullYear()} Bitbuilders. All rights
+                reserved.
               </p>
             </footer>
           </div>
         </TerminalWindow>
       </div>
     </div>
-  )
+  );
 }
-
