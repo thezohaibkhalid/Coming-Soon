@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
+import Countdown from 'react-countdown'
 import gsap from 'gsap'
 
 interface CountdownDigitProps {
@@ -8,7 +9,7 @@ interface CountdownDigitProps {
   label: string
 }
 
-export function CountdownDigit({ value, label }: CountdownDigitProps) {
+function CountdownDigit({ value, label }: CountdownDigitProps) {
   const digitRef = useRef<HTMLDivElement>(null)
   const prevValue = useRef(value)
 
@@ -38,36 +39,46 @@ export function CountdownDigit({ value, label }: CountdownDigitProps) {
   )
 }
 
-export function LaunchCountdown() {
-  const [timeRemaining, setTimeRemaining] = useState<number>(0);
+export default function PersistentCountdown() {
+  const [targetDate, setTargetDate] = useState<Date | null>(null)
 
   useEffect(() => {
-     const fetchCountdown = async () => {
-      const response = await fetch("/.netlify/functions/countdown");
-      const data = await response.json();
-      
-      if (data.remainingTime) {
-        setTimeRemaining(data.remainingTime);
-      }
-    };
+    const storedDate = localStorage.getItem('countdownTarget')
+    if (storedDate) {
+      setTargetDate(new Date(storedDate))
+    } else {
+      const newTargetDate = new Date(Date.now() + 8 * 24 * 60 * 60 * 1000) // 7 days from now
+      localStorage.setItem('countdownTarget', newTargetDate.toISOString())
+      setTargetDate(newTargetDate)
+    }
+  }, [])
 
-    fetchCountdown(); 
-    const intervalId = setInterval(fetchCountdown, 1000);  
+  const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
+    if (completed) {
+      return <span className="text-green-500">Countdown finished!</span>
+    }
+    return (
+      <div className="flex flex-col items-center gap-8">
+        <h2 className="text-green-500 text-2xl">{`> Crafting Digital Excellence`}</h2>
+        <div className="flex space-x-4">
+          <CountdownDigit value={days} label="Days" />
+          <CountdownDigit value={hours} label="Hours" />
+          <CountdownDigit value={minutes} label="Minutes" />
+          <CountdownDigit value={seconds} label="Seconds" />
+        </div>
+      </div>
+    )
+  }
 
-    return () => clearInterval(intervalId);  
-  }, []);
-
-   const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+  if (!targetDate) {
+    return null // or a loading indicator
+  }
 
   return (
-    <div className="flex justify-center space-x-4">
-      <CountdownDigit value={days} label="Days" />
-      <CountdownDigit value={hours} label="Hours" />
-      <CountdownDigit value={minutes} label="Minutes" />
-      <CountdownDigit value={seconds} label="Seconds" />
-    </div>
+    <Countdown
+      date={targetDate}
+      renderer={renderer}
+    />
   )
 }
+

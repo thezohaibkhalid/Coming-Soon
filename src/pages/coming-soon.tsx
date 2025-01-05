@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { Github, Linkedin, Mail, Terminal } from 'lucide-react'
 import { SubscriptionForm } from '../components/SubscribeUs'
 import { TerminalWindow } from '../components/terminal-window'
-import { CountdownDigit } from '../components/countdown-digit'
+import  CountdownDigit  from '../components/countdown-digit'
 import { TechGrid } from '../components/tech-grid'
 import { MatrixBackground } from '../components/matrix-background'
 import {ReactTyped}  from 'react-typed'
@@ -81,12 +81,7 @@ export default function ComingSoon() {
             </div>
 
             {/* Countdown */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
-              <CountdownDigit value={timeLeft.days} label="Days" />
-              <CountdownDigit value={timeLeft.hours} label="Hours" />
-              <CountdownDigit value={timeLeft.minutes} label="Minutes" />
-              <CountdownDigit value={timeLeft.seconds} label="Seconds" />
-            </div>
+            <CountdownDigit/>
 
             {/* Email Subscription */}
             <SubscriptionForm />
