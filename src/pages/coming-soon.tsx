@@ -21,7 +21,7 @@ export default function ComingSoon() {
               <span className="text-green-400">root@bitbuilders:~$</span>
               <span className="animate-pulse">▊</span>
             </div>
-            <p className="typing-animation">initializing your brand...</p>
+            <p className="typing-animation">initializing your website...</p>
           </div>
 
           <div className="space-y-16">
