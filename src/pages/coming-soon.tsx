@@ -65,7 +65,7 @@ export default function ComingSoon() {
             <ReactTyped
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-green-400"
                 style={{ textShadow: '0 0 20px rgba(74, 222, 128, 0.5)' }}
-                strings={['Bitbuilders.tech', 'Coming Soon', 'Email us to get notified']}
+                strings={['Bitbuilders.tech', 'Coming Soon']}//, 'Email us to get notified'
                 typeSpeed={80}  // Type speed for each string
                 backSpeed={0.1}   // Slow down the backspace to reduce blinking
                 backDelay={2000} // Add a delay before backspacing starts
@@ -90,7 +90,7 @@ export default function ComingSoon() {
             </div>
 
             {/* Email Subscription */}
-            <form 
+            {/* <form 
               action="/api/collect-email"
               className="max-w-md mx-auto space-y-4"
             >
@@ -109,7 +109,7 @@ export default function ComingSoon() {
                   Notify Me
                 </Button>
               </div>
-            </form>
+            </form> */}
 
             {/* Technologies */}
             <div className="space-y-8">
