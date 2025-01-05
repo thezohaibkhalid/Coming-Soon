@@ -30,16 +30,20 @@ export default function ComingSoon() {
               <ReactTyped
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-green-400"
                 style={{ textShadow: "0 0 20px rgba(74, 222, 128, 0.5)" }}
-                strings={["Bitbuilders.tech", "Coming Soon", 'Email us to get notified']} //, 'Email us to get notified'
-                typeSpeed={80}  
-                backSpeed={0.1}  
-                backDelay={2000}  
-                startDelay={500} 
-                loop={false} 
-                showCursor={true} 
-                cursorChar="|"  
-                fadeOut={true} 
-                fadeOutDelay={1000}  
+                strings={[
+                  "Bitbuilders.tech",
+                  "Coming Soon",
+                  "Email us to get notified",
+                ]} //, 'Email us to get notified'
+                typeSpeed={80}
+                backSpeed={0.1}
+                backDelay={2000}
+                startDelay={500}
+                loop={false}
+                showCursor={true}
+                cursorChar="|"
+                fadeOut={true}
+                fadeOutDelay={1000}
               />
               <p className="text-xl text-green-500/80">
                 {"> "} Crafting Digital Excellence
@@ -81,7 +85,7 @@ export default function ComingSoon() {
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=zohaibkhalid.pk@gmail.com&su=Project%20Inquiry&body=%0A%0A%20%20%20%20%3C%3C%20Project%20Name%3A%20Enter%20Here%0A%20%20%20%20%3C%3C%20WhatsApp%20Number%3A%20Enter%20Here%0A%20%20%20%20%3C%3C%20Project%20Details%3A%20Enter%20Here%20or%20attach%20files%0A%20%20%20%20%3C%3C%20Advanced%20Details%3A%20Enter%20Here%20%0A%0A%20%20%20%20-----------------------------------------%0A%20%20%20%20Looking%20forward%20to%20your%20response!%0A%0A"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=zohaibkhalid.pk@gmail.com&su=Project%20Inquiry&body=%0A%0A%20%20%20%20Project%20Name%3A%20Enter%20Here%0A%20%20%20%20WhatsApp%20Number%3A%20Enter%20Here%0A%20%20%20%20Project%20Details%3A%20Enter%20Here%20or%20attach%20files%0A%20%20%20%20Advanced%20Details%3A%20Enter%20Here%0A%0A%20%20%20%20-----------------------------------------%0A%20%20%20%20bitbuilders.tech%0A%0A"
                   target="_blank"
                   className="text-green-500/80 hover:text-green-400 transition-colors"
                 >
