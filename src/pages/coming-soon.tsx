@@ -13,8 +13,8 @@ export default function ComingSoon() {
   return (
     <>
       <Helmet>
-        <title>Bitbuilders.tech - Coming Soon</title>
-        <meta name="description" content="Bitbuilders.tech - Crafting Digital Excellence. Stay tuned for our launch!" />
+        <title>Bitbuilders Web Development Agency</title>
+        <meta name="description" content="Bitbuilders - Crafting Digital Excellence. Stay tuned for our launch!" />
         <meta name="keywords" content="Bitbuilders, Digital Excellence, Coming Soon, Technology, Web Development" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Bitbuilders.tech - Coming Soon" />
